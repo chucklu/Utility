@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Data;
 
 namespace Utility
@@ -25,6 +26,11 @@ namespace Utility
                 }
             }
             return obj;
+        }
+
+        public static string GetFullName(this Enum myEnum)
+        {
+            return $"{myEnum.GetType().Name}.{myEnum.ToString()}";
         }
     }
 }
